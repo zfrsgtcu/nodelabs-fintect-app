@@ -1,0 +1,26 @@
+@use "../base/global" as *;
+@use "../abstracts/breakpoints" as *;
+
+.custom-container {
+  overflow-x: auto;
+
+  @include mq(null, 1023px) {
+    padding: 20px 16px !important;
+    gap: 20px;
+  }
+
+  @include mq(null, $breakpoint-tablet - 1px) {
+    padding: 16px 12px !important;
+    gap: 10px;
+  }
+
+  @include mq(null, 1023px) {
+    .dashboard-header {
+      gap: 12px;
+      margin-bottom: 4px;
+      h1 {
+        font-size: calc(30px * 0.65);
+      }
+    }
+  }
+}

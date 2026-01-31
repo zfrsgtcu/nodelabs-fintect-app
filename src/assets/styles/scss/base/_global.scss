@@ -1,0 +1,14 @@
+// Config Forwards (Expose to importers)
+@forward "../abstracts/variables";
+@forward "../abstracts/mixins";
+@forward "../abstracts/functions";
+@forward "../abstracts/placeholders";
+@forward "../abstracts/breakpoints";
+@forward "../base/ui/fonts/fonts";
+@forward "../base/ui/icons/icons";
+
+// Style Module Forwards (Expose mixins)
+@forward "./reset" as reset-*;
+@forward "./typography" as typo-*;
+
+

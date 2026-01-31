@@ -1,0 +1,18 @@
+// Flexible Font Function
+// Responsive font boyutu için ölçek faktörü kullanır
+// @param $size: Temel font boyutu (örn: 16px)
+// @param $scale: Ölçek faktörü (örn: 0.95 = minimum %95, maksimum %105)
+// @return: clamp() ile responsive font boyutu
+@function flexible-font($size, $scale) {
+  $font-size: calc(#{$size} * #{$scale});
+  
+  @return $font-size;
+}
+  
+
+
+
+
+
+
+

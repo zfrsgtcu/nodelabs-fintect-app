@@ -1,0 +1,105 @@
+@use "../base/global" as *;
+
+.credit-card{
+    background: #20201F;
+    background: linear-gradient(-90deg,rgba(32, 32, 31, 1) 45%, rgba(74, 74, 73, 1) 100%);
+    padding: 18px 30px;
+    border-radius: 15px;
+    max-width: 354px;
+
+
+    &-header{
+        .logo{
+            color: $color-white;    
+            font-weight: 400;
+            font-family: $font-kumbh-sans;
+            font-size: 16px;
+            line-height: 100%;
+        }
+        p{
+            color:$color-lavender-dark-3;
+            font-weight: 500;
+            font-family: $font-gordita;
+            font-size: 12px;
+        }
+        .vr{
+            background-color: $color-lavender-dark-2;
+            width: 1px;
+            margin: 0 4px;
+            display: block;
+            position: relative;
+            height: 15px;
+        }
+    }
+    background-color: $color-slate-dark;
+    transition: all 0.3s ease;
+  
+    &-center{
+        .card-number{
+            font-family: $font-gordita;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 17px;
+            line-height: 100%;
+            color: $color-white;
+            letter-spacing: 0.17em;
+            margin-top: 21px;
+        }
+        
+    }
+    &-footer{
+       margin-top: 7px;
+    }
+
+  
+}
+
+.credit-card-detail{
+    box-shadow: none;
+    margin: 15px;
+    margin-top: -67px;
+    background: rgb(221, 221, 221 , 0.3);
+    backdrop-filter: blur(6px);   
+    padding: 20px 17px;
+    max-width: 324px;
+
+    .detail-header{
+        .logo{
+            color: $color-white;    
+            font-weight: 400;
+            font-family: $font-kumbh-sans;
+            font-size: 16px;
+            line-height: 100%;
+        }
+        p{
+            color:$color-white;
+            font-weight: 500;
+            font-family: $font-gordita;
+            font-size: 12px;
+        }
+        .vr{
+            background-color: $color-white;
+            width: 1px;
+            margin: 0 4px;
+            display: block;
+            position: relative;
+            height: 15px;
+        }
+    }
+    .detail-center{
+        .card-number{
+            font-family: $font-gordita;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 17px;
+            line-height: 100%;
+            color: $color-slate-dark;
+            letter-spacing: 0.17em;
+            margin-top: 24px;
+        }
+    }
+    .detail-footer{
+        margin-top: 0px;
+    }
+   
+}

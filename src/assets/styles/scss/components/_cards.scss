@@ -1,0 +1,136 @@
+@use "../base/global" as *;
+
+
+.card-ui{
+    @apply flex flex-row items-center justify-start;
+    gap:15px;
+    padding: 24px 20px;
+    border-radius: 10px;
+    background-color: $color-gray-lighter-3;
+    transition: background-color 0.15s linear;
+   
+
+    .card-icon{
+       height: 42px;
+       width: 42px;
+       @apply flex items-center justify-center rounded-full;
+       background-color: $color-gray-lighter-2;
+       i{
+           color: $color-slate-dark-light-2;            
+       }
+    }
+
+    dt{
+       color:$color-slate;
+       line-height: 100%;
+       min-height: 17px;
+   }
+
+    dd{
+       color:$color-slate-dark;
+       line-height: 100%;
+       min-height: 30px;
+   }
+
+
+    &:hover{
+        background-color:$color-slate-dark-light-2;
+
+        .card-icon{    
+           background-color:$color-slate-light-2;
+           i{
+               color: $color-green-primary;            
+           }
+        }
+
+        dd{
+            color:$color-white;
+        }
+    }
+    
+}
+
+.card-border{
+    @apply flex flex-col items-stretch;
+    border:solid 1px $color-gray-light;
+    border-radius: 10px;
+   
+
+    &-header{        
+        @apply flex flex-row flex-wrap items-center justify-between;
+        gap:72px;
+        .capital-title{
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 100%;
+            font-family: $font-kumbh-sans;
+            color: $color-slate-dark;
+        }
+
+        select {
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' fill='none'%3E%3Cpath d='M3 4.5L6 7.5L9 4.5' stroke='%23333' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: 400;
+            font-family: $font-kumbh-sans;
+            line-height: 100%;
+            padding: 7.5px 36px 7.5px 10px;
+            cursor: pointer;
+            background-color: $color-gray-lighter-4;
+
+            &:focus{
+                outline: none;
+                border: solid 1px $color-gray-lighter-2;
+                box-shadow: none;
+            }
+
+            &:hover{
+                background-color: $color-gray-light-soft;
+            }
+        }        
+
+        .card-redirect{
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 100%;
+            font-family: $font-kumbh-sans;
+            color:$color-green-1;
+            gap:6px;
+            i{
+                font-size: 9px;
+            }
+
+            &:hover{
+                color:$color-green-2;
+            }
+        }
+        
+    }
+
+
+    .tooltip{
+         background-image: url("/images/icons/tooltip.svg");          
+         cursor: pointer;
+         transition: background-image 0.15s linear;
+         min-width: 57px;
+         min-height: 36px;
+         width: max-content;
+         background-repeat: no-repeat;
+         background-size: 100% 100%;
+         p{
+            font-size: 12px;
+            font-weight: 500;
+            font-family: $font-kumbh-sans;
+            line-height: 100%;
+            margin-top: -7px;
+         }
+         display: flex;
+         align-items: center;
+         justify-content: center;
+    }
+
+}

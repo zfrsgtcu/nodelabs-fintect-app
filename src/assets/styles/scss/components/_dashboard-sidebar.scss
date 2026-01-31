@@ -1,0 +1,104 @@
+@use "../base/global" as *;
+@use "../abstracts/breakpoints" as *;
+
+.dashboard-sidebar {
+  @apply flex flex-col bg-gray-light-soft h-full;
+  max-width: 250px;
+  width: 100%;
+  padding: 25px;
+  padding-top: 30px;
+  padding-bottom: 100px;
+
+  nav {
+    ul {
+      gap: 2px;
+      li {
+        a,
+        .sidebar-logout-button {
+          font-family: $font-kumbh-sans;
+          padding: 14px 15px;
+          display: flex;
+          flex-direction: row;
+          line-height: 100%;
+          font-size: 14px;
+          border-radius: 8px;
+          font-weight: 500;
+          color: $color-slate;
+          align-items: center;
+          gap: 12px;
+          width: 100%;
+          text-align: left;
+          border: none;
+          background: transparent;
+          cursor: pointer;
+
+          i {
+            font-size: 20px;
+            color: $color-slate;
+          }
+
+          &:hover {
+            color: $color-slate-dark;
+            i {
+              color: $color-slate-dark;
+            }
+          }
+        }
+
+        a {
+          &[aria-current="page"] {
+            font-weight: 600;
+            background-color: $color-green-primary;
+            color: $color-slate-dark;
+            i {
+              color: $color-slate-dark;
+            }
+            &:hover {
+              background-color: $color-green-primary-2;
+            }
+            &:active {
+              background-color: $color-green-primary-dark;
+            }
+          }
+        }
+
+        .sidebar-logout-button:active {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}
+
+// 1280px altı: sidebar dar, 70px genişlik, ikon-only menü
+@include mq(null, $breakpoint-laptop-sm-plus - 1px) {
+  .dashboard-sidebar {
+    display: flex;
+    max-width: 70px;
+    width: 70px;
+    min-width: 70px;
+    padding: 16px 10px;
+    padding-bottom: 24px;
+
+    .dashboard-sidebar__header {
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .sidebar-item-label {
+      display: none;
+    }
+
+    nav ul li a,
+    nav ul li .sidebar-logout-button {
+      justify-content: center;
+      padding: 14px 0;
+      gap: 0;
+
+      i {
+        margin: 0;
+      }
+    }
+  }
+}

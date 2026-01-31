@@ -1,0 +1,176 @@
+// Renk paleti
+// Projede kullanılan tüm renkleri burada tanımlıyoruz
+
+// Temel Renkler
+$color-white: #ffffff;
+$color-black: #000000;
+$color-background: #ffffff;
+$color-foreground: #171717;
+
+// Slate Dark (Koyu Mavi-Gri)
+$color-slate-dark: #1B212D;
+$color-slate-dark-darker: #0F1419;
+$color-slate-dark-soft: #2A3441;
+$color-slate-dark-light: #3D4754;
+$color-slate-dark-light-2: #363A3F;
+
+// Slate (Açık Gri-Mavi)
+$color-slate: #929EAE;
+$color-slate-darker: #6B7788;
+$color-slate-soft: #A8B4C4;
+$color-slate-light: #B8C4D4;
+$color-slate-light-2: #4E5257;
+$color-slate-light-3: #363B41;
+// Lavender Gray (Mor-Gri)
+$color-lavender: #78778B;
+$color-lavender-dark: #5A5969;
+$color-lavender-dark-3: #626260;
+$color-lavender-dark-2: #626261;
+$color-lavender-soft: #8E8DA0;
+$color-lavender-light: #A4A3B6;
+
+
+// Primary Colors
+$color-green-primary: #C8EE44;
+$color-green-primary-2: #bce42b;
+$color-green-primary-dark: #A5C82A;
+$color-green-primary-soft: #D4F05A;
+$color-green-primary-light: #E0F270;
+
+// Light Gray (Açık Gri)
+$color-gray-light: #F5F5F5;
+$color-gray-light-dark: #E0E0E0;
+$color-gray-light-soft: #FAFAFA;
+$color-gray-light-light: #FFFFFF;
+$color-gray-lighter: #F2F2F2;
+$color-gray-lighter-2: #EBE8E8;
+$color-gray-lighter-3: #F5F5F5;
+$color-gray-lighter-4: #F8F8F8;
+
+// Purple Colors
+$color-purple-1: #5243AA;
+$color-purple-1-dark: #3D318D;
+$color-purple-1-soft: #6254B8;
+$color-purple-1-light: #7769C6;
+$color-purple-2: #3D318D;
+$color-purple-2-dark: #2E256E;
+$color-purple-2-soft: #5243AA;
+$color-purple-2-light: #6254B8;
+
+// Green Colors
+$color-green-1: #29A073;
+$color-green-1-dark: #1F7A56;
+$color-green-1-soft: #36B385;
+$color-green-1-light: #4CD9A2;
+$color-green-2: #1F7A56;
+$color-green-2-dark: #155A3E;
+$color-green-2-soft: #299764;
+$color-green-2-light: #36B385;
+$color-green-3: #155A3E;
+$color-green-3-dark: #0E442E;
+$color-green-3-soft: #1F7A56;
+$color-green-3-light: #299764;
+
+// Status/Notification Colors
+$color-success: #22C55E; // Onay - Yeşil
+$color-success-light: #DCFCE7;
+$color-success-dark: #15803D;
+
+$color-error: #EF4444;   // Hata - Kırmızı
+$color-error-light: #FEE2E2;
+$color-error-dark: #B91C1C;
+
+$color-warning: #F59E0B; // Uyarı - Turuncu
+$color-warning-light: #FEF3C7;
+$color-warning-dark: #B45309;
+
+$color-info: #3B82F6;    // Bildirim - Mavi
+$color-info-light: #DBEAFE;
+$color-info-dark: #1D4ED8;
+
+// Tailwind CSS v4 @theme - Utility Class'lar için renk tanımlamaları
+// Bu tanımlamalar sayesinde "text-green-1", "bg-green-1" gibi class'lar kullanılabilir
+@theme {
+  // Temel Renkler
+  --color-white: #{$color-white};
+  --color-black: #{$color-black};
+  --color-background: #{$color-background};
+  --color-foreground: #{$color-foreground};
+
+  // Slate Dark (Koyu Mavi-Gri)
+  --color-slate-dark: #{$color-slate-dark};
+  --color-slate-dark-darker: #{$color-slate-dark-darker};
+  --color-slate-dark-soft: #{$color-slate-dark-soft};
+  --color-slate-dark-light: #{$color-slate-dark-light};
+  --color-slate-dark-light-2: #{$color-slate-dark-light-2};
+
+  // Slate (Açık Gri-Mavi)
+  --color-slate: #{$color-slate};
+  --color-slate-darker: #{$color-slate-darker};
+  --color-slate-soft: #{$color-slate-soft};
+  --color-slate-light: #{$color-slate-light};
+  --color-slate-light-2: #{$color-slate-light-2};
+  --color-slate-light-3: #{$color-slate-light-3};
+
+  // Lavender Gray (Mor-Gri)
+  --color-lavender: #{$color-lavender};
+  --color-lavender-dark: #{$color-lavender-dark};
+  --color-lavender-dark-3: #{$color-lavender-dark-3};
+  --color-lavender-dark-2: #{$color-lavender-dark-2};
+  --color-lavender-soft: #{$color-lavender-soft};
+  --color-lavender-light: #{$color-lavender-light};
+
+  // Primary Colors
+  --color-green-primary: #{$color-green-primary};
+  --color-green-primary-dark: #{$color-green-primary-dark};
+  --color-green-primary-soft: #{$color-green-primary-soft};
+  --color-green-primary-light: #{$color-green-primary-light};
+
+  // Light Gray (Açık Gri)
+  --color-gray-light: #{$color-gray-light};
+  --color-gray-light-dark: #{$color-gray-light-dark};
+  --color-gray-light-soft: #{$color-gray-light-soft};
+  --color-gray-light-light: #{$color-gray-light-light};
+  --color-gray-lighter: #{$color-gray-lighter};
+  --color-gray-lighter-2: #{$color-gray-lighter-2};
+  --color-gray-lighter-3: #{$color-gray-lighter-3};
+  --color-gray-lighter-4: #{$color-gray-lighter-4};
+
+  // Purple Colors
+  --color-purple-1: #{$color-purple-1};
+  --color-purple-1-dark: #{$color-purple-1-dark};
+  --color-purple-1-soft: #{$color-purple-1-soft};
+  --color-purple-1-light: #{$color-purple-1-light};
+  --color-purple-2: #{$color-purple-2};
+  --color-purple-2-dark: #{$color-purple-2-dark};
+  --color-purple-2-soft: #{$color-purple-2-soft};
+  --color-purple-2-light: #{$color-purple-2-light};
+
+  // Green Colors
+  --color-green-1: #{$color-green-1};
+  --color-green-1-dark: #{$color-green-1-dark};
+  --color-green-1-soft: #{$color-green-1-soft};
+  --color-green-1-light: #{$color-green-1-light};
+  --color-green-2: #{$color-green-2};
+  --color-green-2-dark: #{$color-green-2-dark};
+  --color-green-2-soft: #{$color-green-2-soft};
+  --color-green-2-light: #{$color-green-2-light};
+  --color-green-3: #{$color-green-3};
+  --color-green-3-dark: #{$color-green-3-dark};
+  --color-green-3-soft: #{$color-green-3-soft};
+  --color-green-3-light: #{$color-green-3-light};
+
+  // Status/Notification Colors
+  --color-success: #{$color-success};
+  --color-success-light: #{$color-success-light};
+  --color-success-dark: #{$color-success-dark};
+  --color-error: #{$color-error};
+  --color-error-light: #{$color-error-light};
+  --color-error-dark: #{$color-error-dark};
+  --color-warning: #{$color-warning};
+  --color-warning-light: #{$color-warning-light};
+  --color-warning-dark: #{$color-warning-dark};
+  --color-info: #{$color-info};
+  --color-info-light: #{$color-info-light};
+  --color-info-dark: #{$color-info-dark};
+}

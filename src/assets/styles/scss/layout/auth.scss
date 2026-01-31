@@ -1,0 +1,302 @@
+@use "../base/global" as *;
+
+// Auth layout: 1440×900 Figma referansına göre orantılandırılmış değerler
+$auth-design-w: 1440;
+$auth-design-h: 900;
+
+// Sol panel — kenar boşlukları ve logo–form arası (vw/vh ile fluid, 1440×900’da pixel-perfect)
+$auth-margin-left-ratio: 9.375; // 135px @ 1440px
+$auth-margin-top-ratio: 4.444; // 40px @ 900px
+$auth-logo-form-gap-ratio: 17.444; // 157px @ 900px (login: logo-wrapper → form-wrapper)
+$auth-logo-form-gap-ratio-register: 11.667; // 105px @ 900px (register)
+$auth-form-max-w: 404;
+$auth-logo-max-w: 365;
+
+// Sağ panel 675×900, hand-watch 234×699 (Figma)
+$hand-watch-width-ratio: 34.667; // 234/675 — panel genişliğine oran
+$hand-watch-height-ratio: 77.667; // 699/900 — panel yüksekliğine oran
+
+.auth-wrapper {
+    .auth-left-wrapper {
+        .form-container {
+            max-width: #{$auth-form-max-w}px;
+            margin-left: clamp(24px, #{$auth-margin-left-ratio}vw, 135px);
+            margin-top: clamp(24px, #{$auth-margin-top-ratio}vh, 40px);
+            transition: all 0.15s cubic-bezier(0.075, 0.82, 0.165, 1);    
+            @include mobile {
+                max-width:90%;
+                margin: 0 auto;
+                margin-top: 50px;
+                padding-bottom: 60px;                
+            }
+            @include laptop {
+                margin-left: 135px;
+                margin-top: 40px;
+            }
+            @include mobile-to-tablet {
+                max-width:85%;
+                margin:0 auto;
+                margin-top: 60px;
+            }          
+            @include laptop-md {
+                max-width:80%;
+                margin:0 auto;
+                margin-top: 40px;
+            }
+            @include hd-plus {
+                margin-left:120px;
+                margin-top: 90px;
+            }
+            @include hq-plus {
+                margin-left:140px;
+                margin-top: 105px;
+            }
+
+            @include fullhd {
+                margin-left:180px;
+                margin-top: 140px;
+                max-width:470px;
+            }
+            @include fullhd-up {
+                max-width:calc(#{$auth-form-max-w}px * 1.20);
+                margin-top: 200px;
+                margin-left:270px;
+            }
+            
+           
+
+            .logo-wrapper {
+                max-width: clamp(280px, #{100 * $auth-logo-max-w / $auth-design-w}vw, #{$auth-logo-max-w}px);
+                margin-bottom: clamp(32px, #{$auth-logo-form-gap-ratio}vh, 157px); 
+                @include laptop {
+                    margin-bottom: 80px;
+                }
+                @include laptop-md {
+                    margin-bottom: 50px;
+                }
+                @include mobile {
+                    margin-bottom: 40px;                  
+                }               
+                @include mobile-to-tablet {
+                    margin-bottom: 50px; 
+                }
+                @include laptop-sm {
+                    margin-bottom: 70px; 
+                }
+                            
+            }
+
+            .custom-margin{
+                margin-bottom: clamp(32px, #{$auth-logo-form-gap-ratio}vh, 105px);
+                @include laptop {
+                    margin-bottom: 60px;
+                }
+                @include mobile {
+                    margin-bottom: 40px;                  
+                } 
+                @include laptop-md {
+                    margin-bottom: 50px;
+                }
+                @include mobile-to-tablet {
+                    margin-bottom: 50px; 
+                }
+                @include laptop-sm {
+                    margin-bottom: 70px; 
+                }
+            }
+
+            .form-wrapper {
+                .auth-form-transition-wrap {
+                    width: 100%;
+                }
+
+                form {
+                    label {
+                        font-size: 14px;
+                        font-weight: 500;
+                        font-family: 'Kumbh Sans', sans-serif;
+                        color: $color-slate-dark;
+                        margin-bottom: 10px;
+                    }
+
+                    input {
+                        font-family: 'Kumbh Sans', sans-serif;
+                        font-weight: 500;
+                        padding: 15px 25px 16px 20px;
+                        border-radius: 10px;
+                        border: 1px solid $color-gray-lighter;
+                        position: relative;
+                        color: $color-slate-dark-darker;
+                        font-size: 14px;
+                        max-height: 47px;
+
+                        &::placeholder {
+                            color: $color-lavender;
+                            font-weight: 500;
+                            font-size: 14px;
+                        }
+
+
+                        &[type="password"] {
+                            font-family: system-ui;
+                            letter-spacing: 3px;
+
+                            &::placeholder {
+                                position: absolute;
+                                left: 17px;
+                                letter-spacing: 3px;
+                                font-size: 20px;
+                                top: 50%;
+                                transform: translateY(-55%);
+                            }
+                        }
+
+                        &:focus {
+                            outline: none;
+                            border-width: 1px;
+                            border-color: $color-slate-darker;
+                        }
+
+                        &.input-error {
+                            border-color: $color-error;
+                            &:focus {
+                                border-color: $color-error;
+                            }
+                        }
+                    }
+
+                    select {
+                        font-family: 'Kumbh Sans', sans-serif;
+                        font-weight: 500;
+                        padding: 15px 25px 16px 20px;
+                        border-radius: 10px;
+                        border: 1px solid $color-gray-lighter;
+                        font-size: 14px;
+                        width: 100%;
+                        &:focus {
+                            outline: none;
+                            border-color: $color-slate-darker;
+                        }
+                        &.border-error {
+                            border-color: $color-error;
+                        }
+                    }
+
+                    .form-field-error {
+                        display: block;
+                        color: $color-error;
+                        font-size: 12px;
+                        margin-top: 4px;
+                        font-family: 'Kumbh Sans', sans-serif;
+                    }
+
+                    .password-strength {
+                        margin-top: 6px;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 4px;
+
+                        .password-strength-bar {
+                            height: 4px;
+                            border-radius: 2px;
+                            background: $color-gray-lighter;
+                            overflow: hidden;
+                        }
+
+                        .password-strength-segment {
+                            display: block;
+                            height: 100%;
+                            border-radius: 2px;
+                            transition: width 0.2s ease, background-color 0.2s ease;
+
+                            &.password-strength-weak {
+                                background-color: $color-error;
+                            }
+                            &.password-strength-medium {
+                                background-color: $color-warning;
+                            }
+                            &.password-strength-strong {
+                                background-color: $color-success;
+                            }
+                        }
+
+                        .password-strength-label {
+                            font-size: 12px;
+                            font-family: 'Kumbh Sans', sans-serif;
+                            font-weight: 500;
+
+                            &.password-strength-weak {
+                                color: $color-error;
+                            }
+                            &.password-strength-medium {
+                                color: $color-warning;
+                            }
+                            &.password-strength-strong {
+                                color: $color-success;
+                            }
+                        }
+                    }
+
+                    input.border-error {
+                        border-color: $color-error;
+                    }
+                }
+            }
+        }
+    }
+
+    
+
+    .auth-right-wrapper {
+        position: relative;
+        overflow: hidden;
+
+        @include mobile-to-tablet {
+            display: none;
+        }
+
+        @include laptop-sm {
+            width: 540px;
+            margin: 0;
+            padding: 3vw;
+        }
+
+        // Arka plan 675/900 — paneli doldurur, hand-watch’ın altında
+        .auth-right-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        // El + saat: 234×699 @ 1440×900, panel içinde orantılı (wrapper merkezler, anim transform çakışmaz)
+        .hand-watch-wrap {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(#{$hand-watch-width-ratio} * 1%);
+            height: auto;
+            aspect-ratio: 234 / 699;
+            z-index: 1;
+            pointer-events: none;
+            opacity: 0;
+
+            @include laptop-sm {
+                width: calc(#{$hand-watch-width-ratio} * 1.09%);
+    
+            }
+        }
+
+        .hand-watch-wrap .hand-watch {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: top center;
+            display: block;
+        }
+    }
+
+}

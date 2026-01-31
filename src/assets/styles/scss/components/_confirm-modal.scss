@@ -1,0 +1,39 @@
+@use "../base/global" as *;
+
+.confirm-modal-cancel,
+.confirm-modal-confirm {
+  font-family: $font-kumbh-sans;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+.confirm-modal-cancel {
+  background-color: $color-gray-light-soft;
+  color: $color-slate-dark;
+  border: 1px solid $color-gray-light-dark;
+
+  &:hover:not(:disabled) {
+    background-color: $color-gray-light;
+    border-color: $color-gray-light-dark;
+  }
+}
+
+.confirm-modal-confirm {
+  background-color: $color-slate-dark;
+  color: $color-white;
+  border: 1px solid $color-slate-dark;
+
+  &:hover:not(:disabled) {
+    background-color: $color-slate-dark-soft;
+    border-color: $color-slate-dark-soft;
+  }
+}

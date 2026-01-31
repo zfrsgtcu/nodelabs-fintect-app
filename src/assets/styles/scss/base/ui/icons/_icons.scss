@@ -1,0 +1,179 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url('./svg/icomoon/icomoon.eot?31mh13');
+  src: url('./svg/icomoon/icomoon.eot?31mh13#iefix') format('embedded-opentype'),
+    url('./svg/icomoon/icomoon.woff2?31mh13') format('woff2'),
+    url('./svg/icomoon/icomoon.ttf?31mh13') format('truetype'),
+    url('./svg/icomoon/icomoon.woff?31mh13') format('woff'),
+    url('./svg/icomoon/icomoon.svg?31mh13#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---- ICON FONT GLYPHS (icomoon) ---- */
+
+.icon-arrow-right:before {
+  content: "\e900";
+}
+
+.icon-dashboard:before {
+  content: "\e905";
+}
+
+.icon-fintech:before {
+  content: "\e906";
+}
+
+.icon-fintech-logo:before {
+  content: "\e907";
+}
+
+.icon-help:before {
+  content: "\e908";
+}
+
+.icon-invoices:before {
+  content: "\e909";
+}
+
+.icon-logout:before {
+  content: "\e90a";
+}
+
+.icon-more:before {
+  content: "\e919";
+}
+
+.icon-notification:before {
+  content: "\e90b";
+}
+
+.icon-search:before {
+  content: "\e90c";
+}
+
+.icon-settings:before {
+  content: "\e90d";
+}
+
+.icon-transactions:before {
+  content: "\e90e";
+}
+
+.icon-wallet:before {
+  content: "\e90f";
+}
+
+.icon-wallet-add:before {
+  content: "\e910";
+}
+
+.icon-wallet-close:before {
+  content: "\e911";
+}
+
+.icon-wifi:before {
+  content: "\e916";
+}
+
+/* ---- SVG ICONS (alphabetical order) ---- */
+
+/* Arrow-down - direct SVG (not font glyphs) */
+.icon-arrow-down {
+  font-family: inherit !important;
+  display: inline-block;
+  width: 10px;
+  height: 6px;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2210%22%20height%3D%226%22%20viewBox%3D%220%200%2010%206%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M9.15082%200H4.7379H0.76413C0.0841302%200%20-0.25587%200.821666%200.225797%201.30334L3.89499%204.97251C4.4829%205.56042%205.43915%205.56042%206.02707%204.97251L7.42248%203.57709L9.69624%201.30334C10.1708%200.821666%209.83082%200%209.15082%200Z%22%20fill%3D%22%231B212D%22%2F%3E%3C%2Fsvg%3E");
+}
+
+/* Card SIM (credit card chip) - direct SVG, font-size controls size */
+.icon-card-sim {
+  font-family: inherit !important;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url("svg/card-sim.svg");
+}
+
+
+
+
+
+/* Google icon (colored) - direct SVG (not font glyphs) */
+.icon-google-colored,
+.icon-google-icon {
+  font-family: inherit !important;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%27-3%200%20262%20262%27%20preserveAspectRatio%3D%27xMidYMid%27%3E%3Cpath%20d%3D%27M255.878%20133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45%2012.04-9.283%2030.172-26.69%2042.356l-.244%201.622%2038.755%2030.023%202.685.268c24.659-22.774%2038.875-56.282%2038.875-96.027%27%20fill%3D%27%234285F4%27%2F%3E%3Cpath%20d%3D%27M130.55%20261.1c35.248%200%2064.839-11.605%2086.453-31.622l-41.196-31.913c-11.024%207.688-25.82%2013.055-45.257%2013.055-34.523%200-63.824-22.773-74.269-54.25l-1.531.13-40.298%2031.187-.527%201.465C35.393%20231.798%2079.49%20261.1%20130.55%20261.1%27%20fill%3D%27%2334A853%27%2F%3E%3Cpath%20d%3D%27M56.281%20156.37c-2.756-8.123-4.351-16.827-4.351-25.82%200-8.994%201.595-17.697%204.206-25.82l-.073-1.73L15.26%2071.312l-1.335.635C5.077%2089.644%200%20109.517%200%20130.55s5.077%2040.905%2013.925%2058.602l42.356-32.782%27%20fill%3D%27%23FBBC05%27%2F%3E%3Cpath%20d%3D%27M130.55%2050.479c24.514%200%2041.05%2010.589%2050.479%2019.438l36.844-35.974C195.245%2012.91%20165.798%200%20130.55%200%2079.49%200%2035.393%2029.301%2013.925%2071.947l42.211%2032.783c10.59-31.477%2039.891-54.251%2074.414-54.251%27%20fill%3D%27%23EB4335%27%2F%3E%3C%2Fsvg%3E");
+}
+
+/* Line-green (colored) - direct SVG (not font glyphs) */
+.icon-line-green {
+  font-family: inherit !important;
+  display: inline-block;
+  width: 45px;
+  height: 8px;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2045%208%27%3E%3Cpath%20d%3D%27M0.901001%206.5C7.47045%201.56444%2034.4948-1.70074%2043.901%206.49999%27%20fill%3D%27none%27%20stroke%3D%27%23C8EE44%27%20stroke-width%3D%273%27%2F%3E%3C%2Fsvg%3E");
+}
+
+/* Mastercard logo - direct SVG, font-size controls size */
+.icon-mastercard {
+  font-family: inherit !important;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%20152.4%20108%27%3E%3Crect%20x%3D%2760.4%27%20y%3D%2725.7%27%20width%3D%2731.5%27%20height%3D%2756.6%27%20fill%3D%27%23FF5F00%27%2F%3E%3Cpath%20d%3D%27M62.4%2C54c0-11%2C5.1-21.5%2C13.7-28.3c-15.6-12.3-38.3-9.6-50.6%2C6.1C13.3%2C47.4%2C16%2C70%2C31.7%2C82.3c13.1%2C10.3%2C31.4%2C10.3%2C44.5%2C0C67.5%2C75.5%2C62.4%2C65%2C62.4%2C54z%27%20fill%3D%27%23EB001B%27%2F%3E%3Cpath%20d%3D%27M134.4%2C54c0%2C19.9-16.1%2C36-36%2C36c-8.1%2C0-15.9-2.7-22.2-7.7c15.6-12.3%2C18.3-34.9%2C6-50.6c-1.8-2.2-3.8-4.3-6-6c15.6-12.3%2C38.3-9.6%2C50.5%2C6.1C131.7%2C38.1%2C134.4%2C45.9%2C134.4%2C54z%27%20fill%3D%27%23F79E1B%27%2F%3E%3C%2Fsvg%3E");
+}
+
+/* Visa logo - direct SVG, font-size controls size */
+.icon-visa {
+  font-family: inherit !important;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2032%2021%27%3E%3Cpath%20d%3D%27M27.4306%2011.7852H25.5139C25.6435%2011.4479%2025.9491%2010.6322%2026.4306%209.33789L26.4722%209.21484C26.5093%209.1237%2026.5556%209.00521%2026.6111%208.85938C26.6667%208.71354%2026.7083%208.59505%2026.7361%208.50391L26.9028%209.25586L27.4306%2011.7852ZM7.375%2010.8965L6.56944%206.86328C6.46759%206.37109%206.12037%206.125%205.52778%206.125H1.80556L1.77778%206.30273C4.65741%207.02279%206.52315%208.55404%207.375%2010.8965ZM9.86111%206.125L7.61111%2012.1133L7.375%2010.8965C7.13426%2010.2585%206.74074%209.66829%206.19444%209.12598C5.64815%208.58366%205.04167%208.18034%204.375%207.91602L6.25%2014.8887H8.68056L12.3056%206.125H9.86111ZM11.7917%2014.9023H14.0972L15.5417%206.125H13.2361L11.7917%2014.9023ZM22.4583%206.34375C21.8194%206.09766%2021.1296%205.97461%2020.3889%205.97461C19.25%205.97461%2018.3194%206.24349%2017.5972%206.78125C16.875%207.31901%2016.5093%208.01628%2016.5%208.87305C16.4907%209.80273%2017.162%2010.5957%2018.5139%2011.252C18.9583%2011.4616%2019.2685%2011.6484%2019.4444%2011.8125C19.6204%2011.9766%2019.7083%2012.1543%2019.7083%2012.3457C19.7083%2012.6191%2019.5694%2012.8288%2019.2917%2012.9746C19.0139%2013.1204%2018.6944%2013.1934%2018.3333%2013.1934C17.537%2013.1934%2016.8148%2013.043%2016.1667%2012.7422L15.8611%2012.5918L15.5417%2014.5605C16.2269%2014.8704%2017.0833%2015.0254%2018.1111%2015.0254C19.3148%2015.0345%2020.2801%2014.7656%2021.0069%2014.2188C21.7338%2013.6719%2022.1065%2012.9427%2022.125%2012.0312C22.125%2011.0651%2021.4769%2010.2721%2020.1806%209.65234C19.7269%209.42448%2019.3981%209.23307%2019.1944%209.07812C18.9907%208.92318%2018.8889%208.75%2018.8889%208.55859C18.8889%208.35807%2019.0023%208.18262%2019.2292%208.03223C19.456%207.88184%2019.7824%207.80664%2020.2083%207.80664C20.8565%207.79753%2021.4306%207.9069%2021.9306%208.13477L22.1389%208.24414L22.4583%206.34375ZM28.3611%206.125H26.5833C25.9815%206.125%2025.5787%206.37109%2025.375%206.86328L21.9583%2014.9023H24.375L24.8611%2013.5898H27.8056C27.8519%2013.7904%2027.9444%2014.2279%2028.0833%2014.9023H30.2222L28.3611%206.125ZM32%201.75V19.25C32%2019.724%2031.8241%2020.1341%2031.4722%2020.4805C31.1204%2020.8268%2030.7037%2021%2030.2222%2021H1.77778C1.2963%2021%200.87963%2020.8268%200.527778%2020.4805C0.175926%2020.1341%200%2019.724%200%2019.25V1.75C0%201.27604%200.175926%200.865885%200.527778%200.519531C0.87963%200.173177%201.2963%200%201.77778%200H30.2222C30.7037%200%2031.1204%200.173177%2031.4722%200.519531C31.8241%200.865885%2032%201.27604%2032%201.75Z%27%20fill%3D%27%231A1F71%27%2F%3E%3C%2Fsvg%3E");
+}

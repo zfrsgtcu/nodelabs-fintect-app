@@ -1,0 +1,84 @@
+@use "../base/global" as *;
+
+@layer components {
+    .btn {
+        @apply w-full text-center font-semibold;
+        padding: 14px 20px;
+        border-radius: 10px;
+        font-family: 'Kumbh Sans', sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 100%;
+        min-height: 47px;
+
+
+        &-green-primary {
+            color: $color-slate-dark;
+            background-color: $color-green-primary;
+
+            &:hover {
+                background-color: $color-green-primary-dark;
+            }
+        }
+
+        &-green-primary-dark {
+            color: $color-slate-dark;
+            background-color: $color-green-primary-dark;
+
+            &:hover {
+                background-color: $color-green-primary;
+            }
+        }
+
+        &-green-primary-soft {
+            color: $color-slate-dark;
+            background-color: $color-green-primary-soft;
+
+            &:hover {
+                background-color: $color-green-primary-light;
+            }
+        }
+
+        &-green-primary-light {
+            color: $color-slate-dark;
+            background-color: $color-green-primary-light;
+
+            &:hover {
+                background-color: $color-green-primary-soft;
+            }
+        }
+
+        &-outline {
+            color: $color-lavender;
+            background-color: transparent;
+            border: 1px solid $color-gray-lighter;
+
+            &:hover {
+                background-color: $color-gray-light-soft;
+            }
+        }
+
+
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    .card-redirect {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 100%;
+        font-family: $font-kumbh-sans;
+        color: $color-green-1;
+        gap: 6px;
+
+        i {
+            font-size: 9px;
+        }
+
+        &:hover {
+            color: $color-green-2;
+        }
+    }
+}

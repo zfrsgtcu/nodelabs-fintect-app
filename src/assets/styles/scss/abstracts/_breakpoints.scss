@@ -1,0 +1,202 @@
+// Responsive Breakpoint Sistemi  |  Kullanım: @include mobile { ... }
+// Modüler ve tekrar kullanılabilir breakpoint tanımlamaları
+
+// Breakpoint Değişkenleri
+$breakpoint-mobile: 375px;         // Mobil Ekran (Telefon)      | @include mq(null, $breakpoint-mobile) { ... }
+$breakpoint-tablet: 768px;         // Tablet Ekran                | @include mq($breakpoint-tablet, null) { ... }
+$breakpoint-laptop-sm: 1060px;     // Küçük Laptop Ekranı         | @include mq($breakpoint-laptop-sm, null) { ... }
+$breakpoint-laptop-sm-plus: 1280px;// Küçük Laptop Ekranı         | @include mq($breakpoint-laptop-sm-plus, null) { ... }
+$breakpoint-laptop: 1366px;        // Standart Laptop Ekranı      | @include mq($breakpoint-laptop, null) { ... }
+$breakpoint-hd: 1440px;            // HD Ekran                    | @include mq($breakpoint-hd, null) { ... }
+$breakpoint-hd-plus: 1530px;            // HD+ Ekran                    | @include mq($breakpoint-hd-plus, null) { ... }
+$breakpoint-hdPlus: 1680px;        // HD++ Ekran                  | @include mq($breakpoint-hdPlus, null) { ... }
+$breakpoint-fullhd: 1920px;        // Full HD Ekran               | @include mq($breakpoint-fullhd, null) { ... }
+$breakpoint-2k-plus: 2280px;       // 2K+ Ekran                   | @include mq($breakpoint-2k-plus, null) { ... }
+$breakpoint-2k: 2560px;            // 2K Ekran                    | @include mq($breakpoint-2k, null) { ... }
+
+// Media Query Mixin (Temel)  |  Kullanım: @include mq-range($min, $max) { ... }
+@mixin mq-range($min: null, $max: null) {
+  @if $min != null and $max != null {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  } @else if $min != null {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else if $max != null {
+    @media (max-width: $max) {
+      @content;
+    }
+  }
+}
+
+// Wrapper Mixin (Kolay kullanım için)  |  Kullanım: @include mq($min, $max) { ... }
+@mixin mq($min: null, $max: null) {
+  @include mq-range($min, $max) {
+    @content;
+  }
+}
+
+// Mobil Ekranlar (0px - 767px)  |  @include mobile { ... }
+@mixin mobile {
+  @include mq(null, $breakpoint-tablet - 1px) {
+    @content;
+  }
+}
+
+// Yalnızca minimum mobil breakpoint'ten (375px) sonrası (375px+)  |  @include mobile-up { ... }
+@mixin mobile-up { 
+  @include mq($breakpoint-mobile, null) {
+    @content;
+  }
+}
+
+// Tablet Ekranlar (768px - 1023px)  |  @include tablet { ... }
+@mixin tablet {
+  @include mq($breakpoint-tablet, $breakpoint-laptop-sm - 1px) {
+    @content;
+  }
+}
+
+// Mobil ekran boyutlarında ve tablet boyutlarında (0px - 1059px)  |  @include mobile-to-tablet { ... }
+@mixin mobile-to-tablet {
+  @include mq(null, $breakpoint-laptop-sm - 1px) {
+    @content;
+  }
+}
+
+// Sadece tablet boyutunda ve üzerindeki (768px+)  |  @include tablet-up { ... }
+@mixin tablet-up { 
+  @include mq($breakpoint-tablet, null) {
+    @content;
+  }
+}
+
+// Küçük Laptop Ekranları (1024px - 1279px)  |  @include laptop-sm { ... }
+@mixin laptop-sm {
+  @include mq($breakpoint-laptop-sm, $breakpoint-laptop-sm-plus - 1px) {
+    @content;
+  }
+}
+
+// Küçük Laptop Ekranları (1280px - 1365px)  |  @include laptop-md { ... }
+@mixin laptop-md {
+  @include mq($breakpoint-laptop-sm-plus, $breakpoint-laptop - 1px) {
+    @content;
+  }
+}
+
+// Küçük laptop ekran boyutlarında ve üzerindeki (1024px+)  |  @include laptop-sm-up { ... }
+@mixin laptop-sm-up { 
+  @include mq($breakpoint-laptop-sm, null) {
+    @content;
+  }
+}
+
+// Küçük Laptop Ekranları (0px - 1279px)  |  @include laptop-sm-plus { ... }
+@mixin laptop-sm-plus {
+  @include mq(null, $breakpoint-laptop-sm-plus) {
+    @content;
+  }
+}
+
+// Laptop Ekranlar (1280px - 1439px)  |  @include laptop { ... }
+@mixin laptop {
+  @include mq($breakpoint-laptop-sm-plus, $breakpoint-hd - 1px) {
+    @content;
+  }
+}
+
+// Standart laptop boyutu ve üzerindeki (1366px+) |  @include laptop-up { ... }
+@mixin laptop-up { 
+  @include mq($breakpoint-laptop, null) {
+    @content;
+  }
+}
+
+// HD Ekranlar (1440px - 1529px)  |  @include hd { ... }
+@mixin hd {
+  @include mq($breakpoint-hd, $breakpoint-hd-plus - 1px) {
+    @content;
+  }
+}
+
+// HD+ Ekranlar (1530px - 1679px)  |  @include hd-plus { ... }
+@mixin hd-plus {
+  @include mq($breakpoint-hd-plus, $breakpoint-hdPlus - 1px) {
+    @content;
+  }
+}
+
+// HD ekran boyutu ve üzerindeki (1440px+)  |  @include hd-up { ... }
+@mixin hd-up { 
+  @include mq($breakpoint-hd, null) {
+    @content;
+  }
+}
+
+// HD++ Ekranlar (1680px - 1919px)  |  @include hdPlus { ... }
+@mixin hq-plus {
+  @include mq($breakpoint-hdPlus, $breakpoint-fullhd - 1px) {
+    @content;
+  }
+}
+
+// Full HD Ekranlar (1920px - 2279px) |  @include fullhd { ... }
+@mixin fullhd {
+  @include mq($breakpoint-fullhd, $breakpoint-2k-plus - 1px) {
+    @content;
+  }
+}
+
+// 2K+ boyutunda ve üzerindeki (2280px+) |  @include fullhd-up { ... }
+@mixin fullhd-up { 
+  @include mq($breakpoint-2k-plus, null) {
+    @content;
+  }
+}
+
+// 2K Ekranlar (2560px ve üzeri) |  @include screen-2k { ... }
+@mixin screen-2k {
+  @include mq($breakpoint-2k, null) {
+    @content;
+  }
+}
+
+// Özel Aralık Mixin'leri -----------
+
+// Sadece mobil ekranlar (0px - 767px) |  @include mobile-only { ... }
+@mixin mobile-only {
+  @include mq(null, $breakpoint-tablet - 1px) {
+    @content;
+  }
+}
+
+// Sadece tablet ekranlar (768px - 1023px) | @include tablet-only { ... }
+@mixin tablet-only {
+  @include mq($breakpoint-tablet, $breakpoint-laptop-sm - 1px) {
+    @content;
+  }
+}
+
+// Sadece küçük laptop ekranlar (1024px - 1279px) | @include laptop-only { ... }
+@mixin laptop-only {
+  @include mq($breakpoint-laptop-sm, $breakpoint-laptop-sm-plus - 1px) {
+    @content;
+  }
+}
+
+// Sadece desktop (1440px ve üzeri) | @include desktop { ... }
+@mixin desktop {
+  @include mq($breakpoint-hd, null) {
+    @content;
+  }
+}
+
+// Sadece max-width:1024px için (0px - 1024px arası) | @include up-to-laptop-sm { ... }
+@mixin up-to-laptop-sm {
+  @include mq(null, $breakpoint-laptop-sm) {
+    @content;
+  }
+}

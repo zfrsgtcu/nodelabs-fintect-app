@@ -1,0 +1,104 @@
+// Font Face Tanımlamaları
+// Projede kullanılan tüm fontlar burada tanımlanır
+
+// Gordita Font Family
+@font-face {
+  font-family: 'Gordita';
+  src: url('./gordita/Gordita-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gordita';
+  src: url('./gordita/Gordita-Regular Italic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gordita';
+  src: url('./gordita/Gordita-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gordita';
+  src: url('./gordita/Gordita-Light Italic.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gordita';
+  src: url('./gordita/Gordita-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gordita';
+  src: url('./gordita/Gordita-Medium Italic.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gordita';
+  src: url('./gordita/Gordita-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gordita';
+  src: url('./gordita/Gordita-Bold Italic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gordita';
+  src: url('./gordita/Gordita-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gordita';
+  src: url('./gordita/Gordita-Black Italic.otf') format('opentype');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+// Kumbh Sans Font Family (Variable Font)
+@font-face {
+  font-family: 'Kumbh Sans';
+  src: url('./kumbh/KumbhSans-VariableFont_YOPQ,wght.ttf') format('truetype-variations');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+$font-gordita: 'Gordita', sans-serif;
+$font-kumbh-sans: 'Kumbh Sans', sans-serif;
+
+
+.font-gordita{
+  font-family: 'Gordita', sans-serif;
+}
+
+.font-kumbh-sans{
+  font-family: 'Kumbh Sans', sans-serif;
+}

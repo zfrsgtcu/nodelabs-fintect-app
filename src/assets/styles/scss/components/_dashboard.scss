@@ -1,0 +1,149 @@
+@use "../base/global" as *;
+@use "../abstracts/breakpoints" as *;
+
+// Dashboard page layout and responsive rules
+.custom-container {
+  [data-page="dashboard-page"] {
+    .dashboard-left-content {
+      max-width: 49.828vw;
+      width: 100%;
+
+      @include laptop {
+        max-width: 45vw;
+      }
+      @include hq-plus {
+        max-width: 53vw;
+      }
+      @include fullhd {
+        max-width: 60vw;
+      }
+      @include fullhd-up {
+        max-width: 68vw;
+      }
+    }
+
+    .dashboard-right-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    // 1440px altı: içerik dikey stack, kartlar wrap / mobilde tek sütun
+    @include mq(null, $breakpoint-laptop - 1px) {
+      &.dashboard-main {
+        flex-direction: column-reverse;
+        gap: 24px;
+        align-items: stretch;
+      }
+
+      .dashboard-left-content {
+        max-width: 100%;
+      }
+
+      .dashboard-stats-row {
+        flex-wrap: wrap;
+        gap: 16px;
+
+        > * {
+          flex: 1 1 200px;
+          min-width: 0;
+        }
+
+        .card-ui {
+          padding: 10px 15px;
+          .card-icon {
+            height: 50px;
+            width: 50px;
+            i {
+              font-size: 30px;
+            }
+          }
+        }
+      }
+
+      .dashboard-right-content {
+        width: 100%;
+        max-width: 100%;
+        flex-direction: row-reverse;
+        section {
+          flex: 1;
+        }
+      }
+    }
+
+    // 768px altı: istatistik kartları tek sütun
+    @include mq(null, $breakpoint-tablet - 1px) {
+      .dashboard-stats-row {
+        flex-direction: column;
+        flex-wrap: nowrap;
+
+        > * {
+          flex: 1 1 auto;
+        }
+      }
+    }
+
+    // 1024px altı: dashboard sayfa margin/padding mobil
+    @include mq(null, 1023px) {
+      &.dashboard-main {
+        margin-top: 20px;
+        gap: 20px;
+      }
+
+      .dashboard-left-content,
+      .dashboard-right-content {
+        gap: 20px;
+      }
+
+      .dashboard-stats-row {
+        gap: 12px;
+      }
+    }
+
+    @include mq(null, $breakpoint-tablet - 1px) {
+      &.dashboard-main {
+        margin-top: 16px;
+        gap: 16px;
+        flex-direction: column;
+      }
+
+      .dashboard-left-content,
+      .dashboard-right-content {
+        gap: 16px;
+        flex-direction: column;
+        .card-border-header {
+          gap: 25px;
+        }
+      }
+
+      .dashboard-right-content {
+        section {
+          padding: 0px 30px;
+        }
+      }
+    }
+
+    // 1530px üstü: geniş ekranlarda okunabilirlik için sol sütun sınırı
+    @include mq($breakpoint-hd-plus + 1px, null) {
+      &.dashboard-main {
+        gap: 48px;
+      }
+
+      .dashboard-left-content {
+        max-width: min(100%, 820px);
+      }
+
+      .dashboard-right-content {
+        max-width: min(100%, 420px);
+      }
+    }
+
+    // 1920px ve üzeri: içerik çok yayılmasın
+    @include mq($breakpoint-fullhd, null) {
+      .dashboard-left-content {
+        max-width: 59vw;
+      }
+    }
+  }
+}

@@ -1,0 +1,95 @@
+// Mutlak konumlandırma için tüm köşe, kenar ve merkez mixinleri + class tanımları aşağıda toplandı
+
+// Üst sol
+@mixin absolute-top-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  // Sol üst köşeye sabitler
+}
+
+// Üst orta
+@mixin absolute-top-center {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  // Üst ortaya sabitler
+}
+
+// Üst sağ
+@mixin absolute-top-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  // Sağ üst köşeye sabitler
+}
+
+// Orta sol
+@mixin absolute-center-left {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  // Orta sol konuma sabitler
+}
+
+// Tam orta
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  // Ebeveynin tam ortasına yerleştirir
+}
+
+// Orta sağ
+@mixin absolute-center-right {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  // Orta sağ konuma sabitler
+}
+
+// Alt sol
+@mixin absolute-bottom-left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  // Sol alt köşeye sabitler
+}
+
+// Alt orta
+@mixin absolute-bottom-center {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  // Alt ortada konumlandır
+}
+
+// Alt sağ
+@mixin absolute-bottom-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  // Sağ alt köşeye sabitler
+}
+
+// ------------------
+// Class tanımlamaları
+// ------------------
+.absolute-top-left         { @include absolute-top-left; }
+.absolute-top-center       { @include absolute-top-center; }
+.absolute-top-right        { @include absolute-top-right; }
+.absolute-center-left      { @include absolute-center-left; }
+.absolute-center           { @include absolute-center; }
+.absolute-center-right     { @include absolute-center-right; }
+.absolute-bottom-left      { @include absolute-bottom-left; }
+.absolute-bottom-center    { @include absolute-bottom-center; }
+.absolute-bottom-right     { @include absolute-bottom-right; }
+
+a,button,input,textarea{
+  transition: all 0.15s ease-in-out;
+}

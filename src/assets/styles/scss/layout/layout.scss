@@ -1,0 +1,21 @@
+// Global Configuration & Styles
+@use "../../lib/tailwind/main";
+
+@use "../base/global" as *;
+
+// Components
+@use "../components/buttons";
+@use "../components/cards";
+@use "../components/c-card";
+@use "../components/confirm-modal";
+@use "../components/dashboard";
+@use "../components/dashboard-sidebar";
+@use "../components/settings";
+@use "../components/skeleton";
+
+
+// mixin-tailwind-layout
+
+
+
+
