@@ -96,7 +96,7 @@ export async function getTransactions(
         throw { status: 500, ...MOCK_UNEXPECTED_ERROR };
       }
       const res = getMockTransactionList();
-      return res.data;
+      return res.data as TransactionListResponse;
     }
     const search = params
       ? "?" +
@@ -169,7 +169,7 @@ export async function getTransactionChartData(
         throw { status: 500, ...MOCK_UNEXPECTED_ERROR };
       }
       const res = getMockTransactionChart();
-      return res.data;
+      return res.data as TransactionChartResponse;
     }
     const search = params
       ? "?" +
