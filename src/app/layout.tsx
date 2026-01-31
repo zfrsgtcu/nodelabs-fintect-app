@@ -6,8 +6,8 @@ import ToastProvider from "@/components/ui/ToastProvider";
 import QueryProvider from "@/providers/QueryProvider";
 
 export const metadata: Metadata = {
-  title: "Fintect App",
-  description: "Fintect Application",
+  title: "Fintech App",
+  description: "Fintech Application",
 };
 
 export default function RootLayout({

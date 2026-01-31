@@ -62,4 +62,15 @@
       }
     }
   }
+
+  .border-error {
+    border-color: $color-error !important;
+    &:focus {
+      border-color: $color-error !important;
+    }
+  }
+
+  .text-error {
+    color: $color-error;
+  }
 }

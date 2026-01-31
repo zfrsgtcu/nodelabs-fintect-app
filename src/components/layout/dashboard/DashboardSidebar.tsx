@@ -55,9 +55,9 @@ export default function DashboardSidebar() {
     >
       <header className="dashboard-sidebar__header flex-shrink-0 mb-[30px]">
         <Link
-          href="/"
+          href="/dashboard"
           className="inline-flex items-center justify-center rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-gray-400"
-          aria-label="Fintech - Go to home"
+          aria-label="Fintech - Go to dashboard"
         >
           <Image
             className="hidden min-[1280px]:block user-select-none drag-none pointer-events-none"

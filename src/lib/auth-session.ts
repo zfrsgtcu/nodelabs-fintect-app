@@ -4,7 +4,7 @@
  * Token is cleared on tab close; use for "already logged in" redirect.
  */
 
-const TOKEN_KEY = "fintect_access_token";
+const TOKEN_KEY = "fintech_access_token";
 
 function isClient(): boolean {
   return typeof window !== "undefined";

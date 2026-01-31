@@ -1,4 +1,4 @@
-# Fintect App
+# Fintech App
 
 Finansal hareketleri, bakiye ve işletme sermayesini takip eden masaüstü öncelikli bir fintech uygulaması. Next.js App Router ile geliştirilmiştir.
 
