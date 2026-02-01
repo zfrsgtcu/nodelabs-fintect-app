@@ -66,7 +66,7 @@ $hand-watch-height-ratio: 77.667; // 699/900 — panel yüksekliğine oran
            
 
             .logo-wrapper {
-                max-width: clamp(280px, #{100 * $auth-logo-max-w / $auth-design-w}vw, #{$auth-logo-max-w}px);
+                max-width: clamp(280px, calc(100 * #{$auth-logo-max-w} / #{$auth-design-w} * 1vw), #{$auth-logo-max-w}px);
                 margin-bottom: clamp(32px, #{$auth-logo-form-gap-ratio}vh, 157px); 
                 @include laptop {
                     margin-bottom: 80px;
